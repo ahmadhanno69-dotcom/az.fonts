@@ -1,0 +1,265 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>AZ Fonts — Fancy Text & Symbol Generator (100+ Styles)</title>
+<meta name="description" content="Generate 100+ fancy Unicode fonts, cool gaming tags, and aesthetic text styles for Instagram, TikTok, Discord, and WhatsApp in seconds on AZ Fonts.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AZ Fonts</title>
+<link rel="manifest" href="manifest.json">
+<script>if("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js");</script>
+<style>
+body.theme-a{--bg:#000;--surface:#111;--surface2:#1a1a1a;--border:rgba(255,255,255,0.1);--border2:rgba(255,255,255,0.2);--accent:#c8ff00;--accent-h:#d9ff33;--text:#f5f5f5;--text2:#aaa;--muted:#666;--card:#111;--hbg:rgba(0,0,0,0.96);--tagbg:rgba(255,255,255,0.06);--tagc:#888;--prev:#f0f0f0;--btnc:#666;--lz:#c8ff00}
+body.theme-z{--bg:#fff5f8;--surface:#fff;--surface2:#fceef3;--border:rgba(220,130,160,0.2);--border2:rgba(220,130,160,0.4);--accent:#e9497a;--accent-h:#d63068;--text:#1a1a1a;--text2:#555;--muted:#999;--card:#fff;--hbg:rgba(255,245,248,0.97);--tagbg:rgba(233,73,122,0.08);--tagc:#e9497a;--prev:#111;--btnc:#aaa;--lz:#e9497a}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:'DM Mono',monospace,sans-serif;transition:background .3s,color .3s;padding-bottom:2rem}
+nav{border-bottom:1px solid var(--border);padding:0 20px;height:54px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:var(--hbg);backdrop-filter:blur(14px);z-index:100}
+.logo{font-family:Georgia,serif;font-size:22px;display:flex;align-items:baseline;gap:1px}
+.la{font-weight:900;color:var(--text);cursor:pointer;transition:color .2s}
+.la:hover{color:var(--accent)}
+.lz{font-weight:400;font-style:italic;color:var(--lz);font-size:24px;cursor:pointer;transition:color .2s}
+.lf{font-size:11px;font-weight:400;color:var(--muted);margin-left:5px;letter-spacing:2px;text-transform:uppercase;font-family:monospace}
+.nav-r{display:flex;align-items:center;gap:8px}
+.tbtn{padding:5px 12px;border-radius:20px;font-size:10px;letter-spacing:1px;text-transform:uppercase;cursor:pointer;border:1px solid var(--border2);background:transparent;color:var(--muted);font-family:monospace;transition:all .2s}
+.tbtn:hover{border-color:var(--accent);color:var(--text)}
+.ta-on{background:#111;color:#fff;border-color:#444}
+.tz-on{background:#ffe0ec;color:#e9497a;border-color:#e9497a}
+.hero{padding:36px 20px 24px;text-align:center;border-bottom:1px solid var(--border)}
+.hero h1{font-family:Georgia,serif;font-size:clamp(24px,4vw,44px);font-weight:700;line-height:1.1;margin-bottom:8px;color:var(--text)}
+.hero h1 em{color:var(--accent);font-style:italic}
+.hero p{color:var(--muted);font-size:11px;margin-bottom:20px;letter-spacing:.5px}
+textarea{width:100%;max-width:640px;background:var(--surface);border:1px solid var(--border2);border-radius:12px;color:var(--prev);font-family:monospace;font-size:16px;padding:14px 16px;resize:none;outline:none;height:76px;display:block;margin:0 auto;transition:border-color .2s,background .3s}
+textarea:focus{border-color:var(--accent)}
+textarea::placeholder{color:var(--muted)}
+.acts{display:flex;gap:8px;margin-top:10px;justify-content:center;flex-wrap:wrap}
+.btn{padding:7px 16px;border-radius:8px;font-family:monospace;font-size:11px;cursor:pointer;border:1px solid var(--border2);background:var(--surface);color:var(--text2);letter-spacing:.5px;transition:all .15s}
+.btn:hover{border-color:var(--text);color:var(--text)}
+.bacc{background:var(--accent);color:#000;border-color:var(--accent);font-weight:500}
+.bacc:hover{background:var(--accent-h);border-color:var(--accent-h);color:#000}
+.fbar{padding:12px 20px;display:flex;gap:5px;overflow-x:auto;scrollbar-width:none;border-bottom:1px solid var(--border);flex-wrap:wrap;row-gap:5px}
+.fbar::-webkit-scrollbar{display:none}
+.pill{padding:5px 13px;border-radius:20px;font-size:10px;letter-spacing:1px;text-transform:uppercase;cursor:pointer;border:1px solid var(--border2);background:transparent;color:var(--muted);white-space:nowrap;font-family:monospace;transition:all .15s}
+.pill:hover{color:var(--text);border-color:var(--text)}
+.pill.on{background:var(--accent);color:#000;border-color:var(--accent);font-weight:500}
+.res{padding:16px 20px}
+.rcnt{font-size:10px;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:9px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:15px;transition:border-color .15s,transform .1s,background .3s}
+.card:hover{border-color:var(--border2);transform:translateY(-1px)}
+.ch{display:flex;align-items:center;justify-content:space-between;margin-bottom:9px}
+.cn{font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted)}
+.ct{font-size:8px;padding:2px 6px;border-radius:4px;background:var(--tagbg);color:var(--tagc);border:1px solid var(--border2);letter-spacing:1px;text-transform:uppercase}
+.cp{font-size:18px;line-height:1.5;word-break:break-all;min-height:32px;margin-bottom:11px;color:var(--prev)}
+.cbtns{display:flex;gap:5px}
+.cbtn{flex:1;padding:6px 9px;border-radius:8px;font-family:monospace;font-size:10px;cursor:pointer;border:1px solid var(--border2);background:transparent;color:var(--btnc);letter-spacing:.5px;transition:all .15s}
+.cbtn:hover{border-color:var(--accent);color:var(--accent)}
+.cbtn.ok{color:#000;border-color:var(--accent);background:var(--accent)}
+.fbtn{padding:6px 8px;border-radius:8px;font-size:12px;cursor:pointer;border:1px solid var(--border2);background:transparent;color:var(--muted);transition:all .15s}
+.fbtn:hover,.fbtn.on{color:#ff6b9d;border-color:#ff6b9d}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(60px);background:var(--accent);color:#000;padding:8px 20px;border-radius:8px;font-size:11px;font-weight:500;transition:transform .3s cubic-bezier(.34,1.56,.64,1);z-index:999;pointer-events:none}
+.toast.show{transform:translateX(-50%) translateY(0)}
+footer{border-top:1px solid var(--border);padding:16px 20px;text-align:center;font-size:10px;color:var(--muted);letter-spacing:1px}
+</style>
+<body class="theme-a">
+<nav>
+  <div class="logo">
+    <span class="la" onclick="sT('a')">A</span>
+    <span class="lz" onclick="sT('z')">𝒵</span>
+    <span class="lf">fonts</span>
+  </div>
+  <div class="nav-r">
+    <button class="tbtn ta-on" id="ta" onclick="sT('a')"><b>A</b> dark</button>
+    <button class="tbtn" id="tz" onclick="sT('z')">𝒵 pink</button>
+  </div>
+</nav>
+<div class="hero">
+  <h1>Generate <em>fancy</em> text<br>in seconds</h1>
+  <p>100+ styles · copy instantly · paste anywhere</p>
+  <textarea id="inp" placeholder="Type your text here..." oninput="gen()">Hello World</textarea>
+  <div class="acts">
+    <button class="btn" onclick="document.getElementById('inp').value='';gen()">clear</button>
+    <button class="btn" onclick="copyAll()">copy all</button>
+    <button class="btn bacc" onclick="gen()">generate ✦</button>
+  </div>
+</div>
+<div class="fbar" id="fbar"></div>
+<div class="res">
+  <div class="rcnt" id="rcnt"></div>
+  <div class="grid" id="grid"></div>
+</div>
+<footer>AZ Fonts — Instagram · Twitter · Discord · WhatsApp · TikTok · Bio</footer>
+<div class="toast" id="toast"></div>
+<script>
+const UP="ABCDEFGHIJKLMNOPQRSTUVWXYZ",LO="abcdefghijklmnopqrstuvwxyz",BOTH=UP+LO,ALNUM=UP+LO+"0123456789";
+function conv(t,map,src){const m=[...map];return t.split('').map(c=>{const i=src.indexOf(c);return i>=0&&i<m.length?m[i]:c}).join('')}
+function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
+
+const S=[
+{n:"bold serif",t:"fancy",f:t=>conv(t,"𝐀𝐁𝐂𝐃𝐄𝐅𝐆𝐇𝐈𝐉𝐊𝐋𝐌𝐍𝐎𝐏𝐐𝐑𝐒𝐓𝐔𝐕𝐖𝐗𝐘𝐙𝐚𝐛𝐜𝐝𝐞𝐟𝐠𝐡𝐢𝐣𝐤𝐥𝐦𝐧𝐨𝐩𝐪𝐫𝐬𝐭𝐮𝐯𝐰𝐱𝐲𝐳𝟎𝟏𝟐𝟑𝟒𝟓𝟔𝟕𝟖𝟗",ALNUM)},
+{n:"italic serif",t:"fancy",f:t=>conv(t,"𝘈𝘉𝘊𝘋𝘌𝘍𝘎𝘏𝘐𝘑𝘒𝘓𝘔𝘕𝘖𝘗𝘘𝘙𝘚𝘛𝘜𝘝𝘞𝘟𝘠𝘡𝘢𝘣𝘤𝘥𝘦𝘧𝘨𝘩𝘪𝘫𝘬𝘭𝘮𝘯𝘰𝘱𝘲𝘳𝘴𝘵𝘶𝘷𝘸𝘹𝘺𝘻",BOTH)},
+{n:"bold italic",t:"fancy",f:t=>conv(t,"𝑨𝑩𝑪𝑫𝑬𝑭𝑮𝑯𝑰𝑱𝑲𝑳𝑴𝑵𝑶𝑷𝑸𝑹𝑺𝑻𝑼𝑽𝑾𝑿𝒀𝒁𝒂𝒃𝒄𝒅𝒆𝒇𝒈𝒉𝒊𝒋𝒌𝒍𝒎𝒏𝒐𝒑𝒒𝒓𝒔𝒕𝒖𝒗𝒘𝒙𝒚𝒛",BOTH)},
+{n:"double struck",t:"fancy",f:t=>conv(t,"𝔸𝔹ℂ𝔻𝔼𝔽𝔾ℍ𝕀𝕁𝕂𝕃𝕄ℕ𝕆ℙℚℝ𝕊𝕋𝕌𝕍𝕎𝕏𝕐ℤ𝕒𝕓𝕔𝕕𝕖𝕗𝕘𝕙𝕚𝕛𝕜𝕝𝕞𝕟𝕠𝕡𝕢𝕣𝕤𝕥𝕦𝕧𝕨𝕩𝕪𝕫𝟘𝟙𝟚𝟛𝟜𝟝𝟞𝟟𝟠𝟡",ALNUM)},
+{n:"sans serif",t:"fancy",f:t=>conv(t,"𝖠𝖡𝖢𝖣𝖤𝖥𝖦𝖧𝖨𝖩𝖪𝖫𝖬𝖭𝖮𝖯𝖰𝖱𝖲𝖳𝖴𝖵𝖶𝖷𝖸𝖹𝖺𝖻𝖼𝖽𝖾𝖿𝗀𝗁𝗂𝗃𝗄𝗅𝗆𝗇𝗈𝗉𝗊𝗋𝗌𝗍𝗎𝗏𝗐𝗑𝗒𝗓𝟢𝟣𝟤𝟥𝟦𝟧𝟨𝟩𝟪𝟫",ALNUM)},
+{n:"bold sans",t:"fancy",f:t=>conv(t,"𝗔𝗕𝗖𝗗𝗘𝗙𝗚𝗛𝗜𝗝𝗞𝗟𝗠𝗡𝗢𝗣𝗤𝗥𝗦𝗧𝗨𝗩𝗪𝗫𝗬𝗭𝗮𝗯𝗰𝗱𝗲𝗳𝗴𝗵𝗶𝗷𝗸𝗹𝗺𝗻𝗼𝗽𝗾𝗿𝘀𝘁𝘂𝘃𝘄𝘅𝘆𝘇𝟬𝟭𝟮𝟯𝟰𝟱𝟲𝟳𝟴𝟵",ALNUM)},
+{n:"italic sans",t:"fancy",f:t=>conv(t,"𝘈𝘉𝘊𝘋𝘌𝘍𝘎𝘏𝘐𝘑𝘒𝘓𝘔𝘕𝘖𝘗𝘘𝘙𝘚𝘛𝘜𝘝𝘞𝘟𝘠𝘡𝘢𝘣𝘤𝘥𝘦𝘧𝘨𝘩𝘪𝘫𝘬𝘭𝘮𝘯𝘰𝘱𝘲𝘳𝘴𝘵𝘶𝘷𝘸𝘹𝘺𝘻",BOTH)},
+{n:"bold italic sans",t:"fancy",f:t=>conv(t,"𝘼𝘽𝘾𝘿𝙀𝙁𝙂𝙃𝙄𝙅𝙆𝙇𝙈𝙉𝙊𝙋𝙌𝙍𝙎𝙏𝙐𝙑𝙒𝙓𝙔𝙕𝙖𝙗𝙘𝙙𝙚𝙛𝙜𝙝𝙞𝙟𝙠𝙡𝙢𝙣𝙤𝙥𝙦𝙧𝙨𝙩𝙪𝙫𝙬𝙭𝙮𝙯",BOTH)},
+{n:"circled",t:"fancy",f:t=>t.split('').map(c=>{const i=UP.indexOf(c.toUpperCase());return i>=0?String.fromCodePoint(0x24B6+i):c}).join('')},
+{n:"parenthesized",t:"fancy",f:t=>t.split('').map(c=>{const i=LO.indexOf(c.toLowerCase());return i>=0?String.fromCodePoint(0x249C+i):c}).join('')},
+{n:"script",t:"cursive",f:t=>conv(t,"𝒜ℬ𝒞𝒟ℰℱ𝒢ℋℐ𝒥𝒦ℒℳ𝒩𝒪𝒫𝒬ℛ𝒮𝒯𝒰𝒱𝒲𝒳𝒴𝒵𝒶𝒷𝒸𝒹ℯ𝒻ℊ𝒽𝒾𝒿𝓀𝓁𝓂𝓃ℴ𝓅𝓆𝓇𝓈𝓉𝓊𝓋𝓌𝓍𝓎𝓏",BOTH)},
+{n:"bold script",t:"cursive",f:t=>conv(t,"𝓐𝓑𝓒𝓓𝓔𝓕𝓖𝓗𝓘𝓙𝓚𝓛𝓜𝓝𝓞𝓟𝓠𝓡𝓢𝓣𝓤𝓥𝓦𝓧𝓨𝓩𝓪𝓫𝓬𝓭𝓮𝓯𝓰𝓱𝓲𝓳𝓴𝓵𝓶𝓷𝓸𝓹𝓺𝓻𝓼𝓽𝓾𝓿𝔀𝔁𝔂𝔃",BOTH)},
+{n:"handwriting",t:"cursive",f:t=>conv(t,"𝒜𝐵𝒞𝒟𝐸𝐹𝒢𝐻𝐼𝒥𝒦𝐿𝑀𝒩𝒪𝒫𝒬𝑅𝒮𝒯𝒰𝒱𝒲𝒳𝒴𝒵𝒶𝒷𝒸𝒹𝑒𝒻𝑔𝒽𝒾𝒿𝓀𝓁𝓂𝓃𝑜𝓅𝓆𝓇𝓈𝓉𝓊𝓋𝓌𝓍𝓎𝓏",BOTH)},
+{n:"gothic",t:"gothic",f:t=>conv(t,"𝔄𝔅ℭ𝔇𝔈𝔉𝔊ℌℑ𝔍𝔎𝔏𝔐𝔑𝔒𝔓𝔔ℜ𝔖𝔗𝔘𝔙𝔚𝔛𝔜ℨ𝔞𝔟𝔠𝔡𝔢𝔣𝔤𝔥𝔦𝔧𝔨𝔩𝔪𝔫𝔬𝔭𝔮𝔯𝔰𝔱𝔲𝔳𝔴𝔵𝔶𝔷",BOTH)},
+{n:"bold gothic",t:"gothic",f:t=>conv(t,"𝕬𝕭𝕮𝕯𝕰𝕱𝕲𝕳𝕴𝕵𝕶𝕷𝕸𝕹𝕺𝕻𝕼𝕽𝕾𝕿𝖀𝖁𝖂𝖃𝖄𝖅𝖆𝖇𝖈𝖉𝖊𝖋𝖌𝖍𝖎𝖏𝖐𝖑𝖒𝖓𝖔𝖕𝖖𝖗𝖘𝖙𝖚𝖛𝖜𝖝𝖞𝖟",BOTH)},
+{n:"medieval",t:"gothic",f:t=>t.split('').map(c=>({'a':'α','b':'в','c':'¢','d':'∂','e':'є','f':'ƒ','g':'g','h':'н','i':'ι','j':'נ','k':'к','l':'ℓ','m':'м','n':'η','o':'σ','p':'ρ','r':'я','s':'ѕ','t':'т','u':'υ','v':'ν','w':'ω','x':'χ','y':'у'}[c.toLowerCase()]||c)).join('')},
+{n:"runic",t:"gothic",f:t=>t.toLowerCase().replace(/a/g,'ᚨ').replace(/b/g,'ᛒ').replace(/d/g,'ᛞ').replace(/e/g,'ᛖ').replace(/f/g,'ᚠ').replace(/g/g,'ᚷ').replace(/h/g,'ᚺ').replace(/i/g,'ᛁ').replace(/l/g,'ᛚ').replace(/m/g,'ᛗ').replace(/n/g,'ᚾ').replace(/o/g,'ᛟ').replace(/r/g,'ᚱ').replace(/s/g,'ᛊ').replace(/t/g,'ᛏ').replace(/u/g,'ᚢ').replace(/w/g,'ᚹ')},
+{n:"greek style",t:"gothic",f:t=>t.replace(/a/gi,'α').replace(/b/gi,'β').replace(/g/gi,'γ').replace(/d/gi,'δ').replace(/e/gi,'ε').replace(/l/gi,'λ').replace(/m/gi,'μ').replace(/p/gi,'π').replace(/r/gi,'ρ').replace(/s/gi,'σ').replace(/t/gi,'τ').replace(/o/gi,'ω')},
+{n:"cyrillic",t:"gothic",f:t=>t.replace(/a/gi,'а').replace(/b/gi,'в').replace(/c/gi,'с').replace(/e/gi,'є').replace(/h/gi,'н').replace(/i/gi,'і').replace(/k/gi,'к').replace(/m/gi,'м').replace(/n/gi,'п').replace(/o/gi,'о').replace(/p/gi,'р').replace(/r/gi,'я').replace(/s/gi,'ѕ').replace(/t/gi,'т').replace(/w/gi,'ш').replace(/x/gi,'х').replace(/y/gi,'у')},
+{n:"bubble",t:"bubble",f:t=>conv(t,"ⓐⓑⓒⓓⓔⓕⓖⓗⓘⓙⓚⓛⓜⓝⓞⓟⓠⓡⓢⓣⓤⓥⓦⓧⓨⓩⒶⒷⒸⒹⒺⒻⒼⒽⒾⒿⓀⓁⓂⓃⓄⓅⓆⓇⓈⓉⓊⓋⓌⓍⓎⓏ①②③④⑤⑥⑦⑧⑨",BOTH+"123456789")},
+{n:"filled bubble",t:"bubble",f:t=>t.split('').map(c=>{const m=[..."🅐🅑🅒🅓🅔🅕🅖🅗🅘🅙🅚🅛🅜🅝🅞🅟🅠🅡🅢🅣🅤🅥🅦🅧🅨🅩"],i=LO.indexOf(c.toLowerCase());return i>=0?m[i]:c}).join('')},
+{n:"square box",t:"bubble",f:t=>t.split('').map(c=>{const m=[..."🄰🄱🄲🄳🄴🄵🄶🄷🄸🄹🄺🄻🄼🄽🄾🄿🅀🅁🅂🅃🅄🅅🅆🅇🅈🅉"],i=LO.indexOf(c.toLowerCase());return i>=0?m[i]:c}).join('')},
+{n:"wide text",t:"aesthetic",f:t=>t.toUpperCase().split('').join(' ')},
+{n:"super wide",t:"aesthetic",f:t=>t.split('').join('  ')},
+{n:"upside down",t:"aesthetic",f:t=>{const a=LO,b="ɐqɔpǝɟƃɥᴉɾʞlɯuodbɹsʇnʌʍxʎz";return[...t].reverse().map(c=>{const i=a.indexOf(c.toLowerCase());return i>=0?(c===c.toUpperCase()?b[i].toUpperCase():b[i]):c}).join('')}},
+{n:"mirror",t:"aesthetic",f:t=>[...t].reverse().join('')},
+{n:"strikethrough",t:"aesthetic",f:t=>t.split('').map(c=>c!==' '?c+'̶':c).join('')},
+{n:"underline",t:"aesthetic",f:t=>t.split('').map(c=>c!==' '?c+'̲':c).join('')},
+{n:"overline",t:"aesthetic",f:t=>t.split('').map(c=>c!==' '?c+'̄':c).join('')},
+{n:"tilde through",t:"aesthetic",f:t=>t.split('').map(c=>c!==' '?c+'̴':c).join('')},
+{n:"slash through",t:"aesthetic",f:t=>t.split('').map(c=>c!==' '?c+'̸':c).join('')},
+{n:"dotted",t:"aesthetic",f:t=>t.split('').join('·')},
+{n:"dashed",t:"aesthetic",f:t=>t.split('').join('-')},
+{n:"wave",t:"aesthetic",f:t=>t.split('').join('~')},
+{n:"stars between",t:"aesthetic",f:t=>t.split('').join('★')},
+{n:"hearts between",t:"aesthetic",f:t=>t.split('').join('♡')},
+{n:"cross between",t:"aesthetic",f:t=>t.split('').join('†')},
+{n:"diamond between",t:"aesthetic",f:t=>t.split('').join('◇')},
+{n:"x between",t:"aesthetic",f:t=>t.split('').join('×')},
+{n:"pipe between",t:"aesthetic",f:t=>t.split('').join('|')},
+{n:"zalgo light",t:"glitch",f:t=>t.split('').map(c=>c!==' '?c+['̈','̊','̂','̃','̄'][Math.floor(Math.random()*5)]:c).join('')},
+{n:"zalgo medium",t:"glitch",f:t=>t.split('').map(c=>{if(c===' ')return c;const d=['̴','̵','̶','̷','̸','͜','͝','͞'];let r=c;for(let i=0;i<3+Math.floor(Math.random()*3);i++)r+=d[Math.floor(Math.random()*d.length)];return r}).join('')},
+{n:"zalgo heavy",t:"glitch",f:t=>t.split('').map(c=>{if(c===' ')return c;const d=['̴','̵','̶','̷','̸','̡','͜','͝','̀','́','̂','̃','̈','̊'];let r=c;for(let i=0;i<7+Math.floor(Math.random()*6);i++)r+=d[Math.floor(Math.random()*d.length)];return r}).join('')},
+{n:"glitch",t:"glitch",f:t=>t.split('').map(c=>c+(Math.random()>.55?['̷','̴','̸'][Math.floor(Math.random()*3)]:'')).join('')},
+{n:"corrupted",t:"glitch",f:t=>t.split('').map(c=>Math.random()>.7?['#','@','%','&','*','$','!','?'][Math.floor(Math.random()*8)]:c).join('')},
+{n:"morse",t:"glitch",f:t=>{const m={a:'.-',b:'-...',c:'-.-.',d:'-..',e:'.',f:'..-.',g:'--.',h:'....',i:'..',j:'.---',k:'-.-',l:'.-..',m:'--',n:'-.',o:'---',p:'.--.',q:'--.-',r:'.-.',s:'...',t:'-',u:'..-',v:'...-',w:'.--',x:'-..-',y:'-.--',z:'--..',0:'-----',1:'.----',2:'..---',3:'...--',4:'....-',5:'.....',6:'-....',7:'--...',8:'---..',9:'----.'};return t.toLowerCase().split('').map(c=>m[c]||c).join(' ')}},
+{n:"binary",t:"glitch",f:t=>t.split('').map(c=>c===' '?' ':c.charCodeAt(0).toString(2).padStart(8,'0')).join(' ')},
+{n:"hex",t:"glitch",f:t=>t.split('').map(c=>c===' '?' ':c.charCodeAt(0).toString(16).toUpperCase().padStart(2,'0')).join(' ')},
+{n:"leet speak",t:"glitch",f:t=>t.replace(/a/gi,'4').replace(/e/gi,'3').replace(/i/gi,'1').replace(/o/gi,'0').replace(/s/gi,'5').replace(/t/gi,'7').replace(/b/gi,'8').replace(/g/gi,'9')},
+{n:"nato alphabet",t:"glitch",f:t=>{const n={a:'Alpha',b:'Bravo',c:'Charlie',d:'Delta',e:'Echo',f:'Foxtrot',g:'Golf',h:'Hotel',i:'India',j:'Juliet',k:'Kilo',l:'Lima',m:'Mike',n:'November',o:'Oscar',p:'Papa',q:'Quebec',r:'Romeo',s:'Sierra',t:'Tango',u:'Uniform',v:'Victor',w:'Whiskey',x:'X-ray',y:'Yankee',z:'Zulu'};return t.toLowerCase().split('').map(c=>n[c]||c).join('-')}},
+{n:"monospace",t:"minimal",f:t=>conv(t,"𝙰𝙱𝙲𝙳𝙴𝙵𝙶𝙷𝙸𝙹𝙺𝙻𝙼𝙽𝙾𝙿𝚀𝚁𝚂𝚃𝚄𝚅𝚆𝚇𝚈𝚉𝚊𝚋𝚌𝚍𝚎𝚏𝚐𝚑𝚒𝚓𝚔𝚕𝚖𝚗𝚘𝚙𝚚𝚛𝚜𝚝𝚞𝚟𝚠𝚡𝚢𝚣𝟶𝟷𝟸𝟹𝟺𝟻𝟼𝟽𝟾𝟿",ALNUM)},
+{n:"small caps",t:"minimal",f:t=>t.toLowerCase().replace(/[a-z]/g,c=>"ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘQʀꜱᴛᴜᴠᴡxʏᴢ"[LO.indexOf(c)]||c)},
+{n:"tiny caps",t:"minimal",f:t=>t.toUpperCase().split('').map(c=>{const m="ᴬᴮᶜᴰᴱᶠᴳᴴᴵᴶᴷᴸᴹᴺᴼᴾᵠᴿˢᵀᵁᵛᵂˣʸᶻ",i=UP.indexOf(c);return i>=0?m[i]:c}).join('')},
+{n:"superscript",t:"minimal",f:t=>conv(t,"ᵃᵇᶜᵈᵉᶠᵍʰⁱʲᵏˡᵐⁿᵒᵖᑫʳˢᵗᵘᵛʷˣʸᶻ⁰¹²³⁴⁵⁶⁷⁸⁹",LO+"0123456789")},
+{n:"subscript",t:"minimal",f:t=>conv(t,"ₐbcdₑfgₕᵢⱼₖₗₘₙₒₚqᵣₛₜᵤᵥwₓyz₀₁₂₃₄₅₆₇₈₉",LO+"0123456789")},
+{n:"uppercase",t:"minimal",f:t=>t.toUpperCase()},
+{n:"lowercase",t:"minimal",f:t=>t.toLowerCase()},
+{n:"alternating",t:"minimal",f:t=>t.split('').map((c,i)=>i%2===0?c.toUpperCase():c.toLowerCase()).join('')},
+{n:"inverse case",t:"minimal",f:t=>t.split('').map(c=>c===c.toUpperCase()?c.toLowerCase():c.toUpperCase()).join('')},
+{n:"title case",t:"minimal",f:t=>t.split(' ').map(w=>w.charAt(0).toUpperCase()+w.slice(1).toLowerCase()).join(' ')},
+{n:"camel case",t:"minimal",f:t=>{const w=t.split(' ');return w[0].toLowerCase()+w.slice(1).map(w=>w.charAt(0).toUpperCase()+w.slice(1)).join('')}},
+{n:"snake case",t:"minimal",f:t=>t.toLowerCase().replace(/\s+/g,'_')},
+{n:"kebab case",t:"minimal",f:t=>t.toLowerCase().replace(/\s+/g,'-')},
+{n:"spaced out",t:"minimal",f:t=>t.split('').join(' ')},
+// CUTE with emojis
+{n:"sparkle ✨",t:"cute",f:t=>'✨ '+t+' ✨'},
+{n:"double sparkle ✨✨",t:"cute",f:t=>'✨✨ '+t+' ✨✨'},
+{n:"glowing star 🌟",t:"cute",f:t=>'🌟 '+t+' 🌟'},
+{n:"shooting star 🌠",t:"cute",f:t=>'🌠 '+t+' 🌠'},
+{n:"star ⭐",t:"cute",f:t=>'⭐ '+t+' ⭐'},
+{n:"hearts 💕",t:"cute",f:t=>'💕 '+t+' 💕'},
+{n:"heart eyes 🥰",t:"cute",f:t=>'🥰 '+t+' 🥰'},
+{n:"pink heart 🩷",t:"cute",f:t=>'🩷 '+t+' 🩷'},
+{n:"red heart ❤",t:"cute",f:t=>'❤ '+t+' ❤'},
+{n:"heart flood 💕",t:"cute",f:t=>t.split('').join('💕')},
+{n:"rainbow 🌈",t:"cute",f:t=>'🌈 '+t+' 🌈'},
+{n:"butterfly 🦋",t:"cute",f:t=>'🦋 '+t+' 🦋'},
+{n:"cherry blossom 🌸",t:"cute",f:t=>'🌸 '+t+' 🌸'},
+{n:"flower flood 🌸",t:"cute",f:t=>'🌸'+t.split('').join('🌸')+'🌸'},
+{n:"rose 🌹",t:"cute",f:t=>'🌹 '+t+' 🌹'},
+{n:"sunflower 🌻",t:"cute",f:t=>'🌻 '+t+' 🌻'},
+{n:"tulip 🌷",t:"cute",f:t=>'🌷 '+t+' 🌷'},
+{n:"moon 🌙",t:"cute",f:t=>'🌙 '+t+' 🌙'},
+{n:"moon & stars 🌙⭐",t:"cute",f:t=>'🌙⭐ '+t+' ⭐🌙'},
+{n:"fire 🔥",t:"cute",f:t=>'🔥 '+t+' 🔥'},
+{n:"crown 👑",t:"cute",f:t=>'👑 '+t+' 👑'},
+{n:"ribbon 🎀",t:"cute",f:t=>'🎀 '+t+' 🎀'},
+{n:"galaxy 🌌",t:"cute",f:t=>'🌌 '+t+' 🌌'},
+{n:"diamond 💎",t:"cute",f:t=>'💎 '+t+' 💎'},
+{n:"gem wrap 💎✦",t:"cute",f:t=>'💎✦ '+t+' ✦💎'},
+{n:"clover 🍀",t:"cute",f:t=>'🍀 '+t+' 🍀'},
+{n:"angel 🕊",t:"cute",f:t=>'🕊 '+t+' 🕊'},
+{n:"magic wand 🪄",t:"cute",f:t=>'🪄✨ '+t+' ✨🪄'},
+{n:"bubble 🫧",t:"cute",f:t=>'🫧💕 '+t+' 💕🫧'},
+{n:"candy 🍬",t:"cute",f:t=>'🍬 '+t+' 🍬'},
+{n:"cupcake 🧁",t:"cute",f:t=>'🧁 '+t+' 🧁'},
+{n:"cloud ☁",t:"cute",f:t=>'☁ '+t+' ☁'},
+{n:"snowflake ❄",t:"cute",f:t=>'❄ '+t+' ❄'},
+{n:"party 🎉",t:"cute",f:t=>'🎉 '+t+' 🎉'},
+{n:"music 🎵",t:"cute",f:t=>'🎵 '+t+' 🎵'},
+{n:"note flood 🎶",t:"cute",f:t=>t.split('').join('🎶')},
+{n:"unicorn 🦄",t:"cute",f:t=>'🦄 '+t+' 🦄'},
+{n:"strawberry 🍓",t:"cute",f:t=>'🍓 '+t+' 🍓'},
+{n:"lollipop 🍭",t:"cute",f:t=>'🍭 '+t+' 🍭'},
+{n:"ice cream 🍦",t:"cute",f:t=>'🍦 '+t+' 🍦'},
+{n:"cherry 🍒",t:"cute",f:t=>'🍒 '+t+' 🍒'},
+{n:"shooting stars 🌠✨",t:"cute",f:t=>'🌠✨ '+t+' ✨🌠'},
+{n:"kawaii (ˆ⌣ˆ)",t:"cute",f:t=>t+'  ♡(ˆ⌣ˆ)'},
+{n:"cat (=^･ω･^=)",t:"cute",f:t=>'(=^･ω･^=) '+t},
+{n:"bear ʕ•ᴥ•ʔ",t:"cute",f:t=>'ʕ•ᴥ•ʔ '+t+' ʕ•ᴥ•ʔ'},
+{n:"kaomoji (｡♥‿♥｡)",t:"cute",f:t=>'(｡♥‿♥｡) '+t},
+{n:"sparkle flood ✧",t:"cute",f:t=>'✦✧'+t.split('').join('✧')+'✦'},
+{n:"star border ✦",t:"cute",f:t=>'✦ '+t.split('').join(' ✦ ')+' ✦'},
+// SYMBOLS
+{n:"double line ═",t:"symbols",f:t=>'═══ '+t+' ═══'},
+{n:"wave line ≋",t:"symbols",f:t=>'≋≋≋ '+t+' ≋≋≋'},
+{n:"arrows »«",t:"symbols",f:t=>'»»» '+t+' «««'},
+{n:"diamonds ◆◇",t:"symbols",f:t=>'◆◇ '+t+' ◇◆'},
+{n:"star line ✦",t:"symbols",f:t=>'✦✦✦ '+t+' ✦✦✦'},
+{n:"floral ❧",t:"symbols",f:t=>'❧ '+t+' ❦'},
+{n:"infinity ∞",t:"symbols",f:t=>'∞ '+t+' ∞'},
+{n:"yin yang ☯",t:"symbols",f:t=>'☯ '+t+' ☯'},
+{n:"sun & moon ☀☽",t:"symbols",f:t=>'☀ '+t+' ☽'},
+{n:"lightning ⚡",t:"symbols",f:t=>'⚡ '+t+' ⚡'},
+{n:"crown ♕",t:"symbols",f:t=>'♕ '+t+' ♕'},
+{n:"chess ♛",t:"symbols",f:t=>'♛ '+t+' ♛'},
+{n:"music ♫♪",t:"symbols",f:t=>'♫ '+t+' ♪'},
+{n:"suits ♠♣♥♦",t:"symbols",f:t=>'♠'+t+'♦'},
+{n:"fleur ⚜",t:"symbols",f:t=>'⚜ '+t+' ⚜'},
+{n:"snowflake ❄✦",t:"symbols",f:t=>'❄✦ '+t+' ✦❄'},
+{n:"guillemets «»",t:"symbols",f:t=>'«« '+t+' »»'},
+{n:"bracket wrap ⟨⟩",t:"symbols",f:t=>'⟨ '+t+' ⟩'},
+{n:"peace ☮",t:"symbols",f:t=>'☮ '+t+' ☮'},
+{n:"om ॐ",t:"symbols",f:t=>'ॐ '+t+' ॐ'},
+];
+
+const CATS=["all","fancy","cursive","gothic","bubble","aesthetic","glitch","cute","minimal","symbols"];
+let cat="all",favs=new Set();
+
+function sT(t){
+  document.body.className='theme-'+t;
+  document.getElementById('ta').className='tbtn'+(t==='a'?' ta-on':'');
+  document.getElementById('tz').className='tbtn'+(t==='z'?' tz-on':'');
+}
+function rfilt(){document.getElementById('fbar').innerHTML=CATS.map(c=>`<button class="pill${c===cat?' on':''}" onclick="scat('${c}')">${c}</button>`).join('')}
+function scat(c){cat=c;rfilt();gen()}
+function getlist(){const q=document.getElementById('inp').value||'Hello World';return S.filter(s=>cat==='all'||s.t===cat).map(s=>({...s,out:s.f(q)}))}
+function gen(){
+  const list=getlist();
+  document.getElementById('rcnt').textContent=list.length+' styles';
+  document.getElementById('grid').innerHTML=list.map((s,i)=>`
+    <div class="card">
+      <div class="ch"><span class="cn">${s.n}</span><span class="ct">${s.t}</span></div>
+      <div class="cp">${esc(s.out)}</div>
+      <div class="cbtns">
+        <button class="cbtn" id="cb${i}" onclick="cp2(${i},\`${s.out.replace(/\\/g,'\\\\').replace(/`/g,'\\`').replace(/\$/g,'\\$')}\`)">copy</button>
+        <button class="fbtn${favs.has(s.n)?' on':''}" onclick="tfav('${s.n}',this)">♥</button>
+      </div>
+    </div>`).join('');
+}
+function cp2(i,txt){navigator.clipboard.writeText(txt).then(()=>{const b=document.getElementById('cb'+i);b.textContent='copied!';b.classList.add('ok');setTimeout(()=>{b.textContent='copy';b.classList.remove('ok')},1500);toast('copied!')})}
+function copyAll(){const all=getlist().map(s=>s.n+': '+s.out).join('\n');navigator.clipboard.writeText(all).then(()=>toast('all '+getlist().length+' copied!'))}
+function tfav(n,b){if(favs.has(n)){favs.delete(n);b.classList.remove('on')}else{favs.add(n);b.classList.add('on');toast('saved ♥')}}
+function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2200)}
+rfilt();gen();
+</script>
+</body>

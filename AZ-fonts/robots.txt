@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://az-fonts.netlify.app/sitemap.xml
